@@ -86,6 +86,45 @@ namespace Week1Practice
                 Console.WriteLine(c);
                 c = c + 1;
             }
+     //2
+    Greeting("Geronimo Jackson");
+     //3
+    Greeting(myName);
+    //5
+    DoubleIt(1337);
+    //6
+    DoubleIt(myAge);
+    //8
+    Multiply(2, 8);
+    //9
+    Multiply(3, myAge);
+    //11
+    LoopThis(20, 30);
+    //12
+    LoopThis(0, myAge);
+    //14
+    SuperLoop(0, 100, 15);
+    //15
+    SuperLoop(0, 200, myAge);
+       
+    //2
+    Console.WriteLine(NewGreeting("Neil de Grasse Tyson"));
+    //3
+    Console.WriteLine(NewGreeting(myName));  
+    //5
+    Console.WriteLine("10 tripled is " + TripleIt(10));
+    //6
+    Console.WriteLine("My age tripled is " + TripleIt(myAge));
+    //8
+    Console.WriteLine(RealMultiply(5, 10));
+    //9
+    Console.WriteLine(RealMultiply(2, myAge));
+
+    //1
+    SuperLoop(RealMultiply(1, 5), TripleIt(myAge), myAge - 10);
+    //2
+    SuperLoop(RealMultiply(1, TripleIt(3)), TripleIt(RealMultiply(myAge, 7)), TripleIt(myAge - RealMultiply(2, 4)));
+        
         }
     
             // PUTTING IT TOGETHER
@@ -93,21 +132,16 @@ namespace Week1Practice
             // 1. Print out the number of letters in your name using the format: "My name, <myName>, has <number of letters> in it."
             // 2. Print out the number of items in your list using the format: "My product list has <number of items> in it."
             // 3. Print out the number of letters of each item in productsList using the format: "<product> has <number of letters> in it."
-
             // DECLARING AND CALLING FUNCTIONS
-           
+          
             // 2. Call the Greeting function by passing in "Geronimo Jackson" as your parameter.
-       
             // 3. Call the Greeting function by passing in myName as your parameter.
              
-           
-      
-            // 5. Call your DoubleIt Function by passing in 1337 as your parameter.
         
+            // 5. Call your DoubleIt Function by passing in 1337 as your parameter.      
             // 6. Call your DoubleIt function by passing in myAge as your parameter.
 
-            // 8. Call your Multiply function by passing in 2 and 8 as your parameters.
-        
+            // 8. Call your Multiply function by passing in 2 and 8 as your parameters.       
             // 9. Call your Multiply function by passing in 3 and myAge as your parameters.
 
            
@@ -132,11 +166,11 @@ namespace Week1Practice
            
             // 5. Using your TripleIt function as part of the parameter for Console.WriteLine(), 
             //      call your TripleIt function using the parameter of 10 to print out "10 tripled is <TripleIt Function Call>"
-        Console.WriteLine(TripleIt(10));
+        
             // 6. Using your TripleIt function as part of the parameter for Console.WriteLine(), 
             //      call your TripleIt function using the parameter of myAge to print out "<myAge> tripled is <TripleIt Function Call>"
 
-            // 7. Create a function called "RealMultiply" that takes two integer parameters called "num1", and "num2".  This function will return the num1 * num2.
+            
             // 8. Using your RealMultiply function as part of the parameter for Console.WriteLine(), 
             //      call your RealMultiply function using the parameter of 5 and 10 to print out the returned value from your function.
             // 9. Using your RealMultiply function as part of the parameter for Console.WriteLine(), 
@@ -153,37 +187,25 @@ namespace Week1Practice
             //      endNum = Call TripleIt with the parameter RealMultiply with the parameters: myAge, 7
             //      increment = Call TripleIt with the parameter of myAge minus RealMultiply with the parameters 2, 4.
 
-            
-
-        }
-
-
-        //START -- FUNCTION DECLARATIONS 
+            //START -- FUNCTION DECLARATIONS 
      // 1. Create a function called "Greeting" that takes one string parameter called "name".  This function will print "Hello <name>"
             static void Greeting(string name)
             {
                 Console.WriteLine("Hello " + name);
             }
-    //Calling
-   Greeting("Geronimo Jackson");
-     Greeting(myName);
+    
     // 4. Create a function called "DoubleIt" that takes one integer parameter called "number".  This function will print "<number> doubled is <number * 2>"
       static void DoubleIt(int number)
         {
             Console.WriteLine(number + " doubled is " + (number * 2));
         }
-    //Calling
-         DoubleIt(1337);
-    DoubleIt(myAge);
+   
     // 7. Create a function called "Multiply" that takes two integer parameters called "num1" and "num2".  This function will print "<num1> times <num2> is <num1 * num2>"
         static void Multiply(int num1, int num2)
     {
         Console.WriteLine(num1 + " times " + num2 + " is " + num1 * num2);
     }
-    //Calling
-    Multiply(2, 8);
-    Multiply(3, myAge);
-       
+
     
      // 10. Create a function called "LoopThis" that takes two integer parameters called "startNum" and "endNum".  
             //      This function will print out: 
@@ -193,43 +215,53 @@ namespace Week1Practice
     {
         Console.WriteLine("I'm looping from " + startNum + " to " + endNum);
     }
-    //Calling
-    LoopThis(20, 30);
-    LoopThis(0, myAge);
+
 
      // 13. Create a function called "SuperLoop" that takes three integer parameters called "startNum", "endNum", and "increment".
-    static void SuperLoop(int startNum, int endNum, int increment)
-{
-    int loopCount = 0;
-    Console.WriteLine("I'm looping from " + startNum + " to " + endNum + " incrementing by " + increment + " each time.");
-    for (int i = startNum; int i = endNum; int i = increment)
-{
-    loopcount++;
-    Console.WriteLine(i);
-}
-    Console.WriteLine("We looped " + loopcount + " this many times."
+        static void SuperLoop(int startNum, int endNum, int increment)
+        {
+            int loopCount = 0;
+            Console.WriteLine("I'm looping from " + startNum + " to " + endNum + " incrementing by " + increment + " each time.");
+            for (int i = startNum; i = endNum; i = increment)
+            {
+                loopcount++;
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("That loop was craaaaazy, we looped " + loopcount + " this many times.");
+        }
+   
+
 
 
     // 1. Create a function called "NewGreeting" that takes one string parameter called "name".  This function will return a string in the format of "Hello, <name>"
-    static string NewGreeting(string name)
+    static void NewGreeting(string name)
     {
-        return "Hello, " + name;
+        Console.WriteLine("Hello, " + name);
     }
-    Console.WriteLine(NewGreeting("Neil de Grasse Tyson"));
-    Console.WriteLine(NewGreeting(myName));
 
      // 4. Create a function called "TripleIt" that takes one integer parameter called "number".  This function will return the number times 3.
-    static int TripleIt(int number)
-{
-    return number * 3
+    static void TripleIt(int number)
+    {
+    Console.WriteLine(number * 3);
 
-}
+    }
+
+        // 7. Create a function called "RealMultiply" that takes two integer parameters called "num1", and "num2".  This function will return the num1 * num2.
+        static void RealMultiply(int num1, int num2)
+        {
+            Console.WriteLine(num1 * num2);
+        }
+  
     //Example function declaration
         static void MyFunction(string myParameter)
         {
             //Code block
         }
     
-        //END   -- FUNCTION DECLARATIONS
-    }
-}
+        //END   -- FUNCTION DECLARATIONS 
+
+        }
+
+
+       
+}    
